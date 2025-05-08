@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .main-title {
+            color: #143b6c;
+            text-align: center;
+            font-weight: bold;
+            margin: 40px 0;
+            position: relative;
+        }
+        .main-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #dc3545;
+            margin: 15px auto 0;
+        }
+        .sidebar {
+            /* background-color: #f8f9fa; */
+            padding: 0 12px;
+        }
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-nav a {
+            display: block;
+            padding: 15px 20px;
+            color: #143b6c;
+            background-color:#f8f9fa;
+            text-decoration: none;
+            border-left: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+      
+        .sidebar-nav a:hover:not(.active) {
+            background-color: #e9ecef;
+            border-left: 5px solid #F5A623;
+        }
+        .sidebar-nav i {
+            margin-right: 10px;
+        }
+        .content-section {
+            /* background-color: #f8f9fa; */
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            /* padding: 60px 0; */
+    position: relative;
+    background-image:url("img/wall.png");
+    overflow: hidden;
+    background-attachment: fixed;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .circle-icon {
+            background-color:#F5A623;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .content-section h2 {
+            color: #143b6c;
+            margin: 0;
+        }
+        .content-section ul {
+            padding-left: 15px;
+        }
+        .content-section li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 10px;
+        }
+        .content-section li:before {
+            content: "•";
+            color: #143b6c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                margin-bottom: 20px;
+            }
+            .content-section{
+                padding: 0px !important;
+                background-image: none !important;
+            }
+        }
+        /* Add smooth transition for accordion */
+    .accordion-button:not(.collapsed) {
+        color: #143b6c;
+        background-color: rgba(20, 59, 108, 0.1);
+        box-shadow: none;
+    }
+    
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0,0,0,.125);
+    }
+    
+    .accordion-body {
+        padding: 0;
+    }
+    
+    .accordion-item {
+        border: none;
+        margin-bottom: 15px;
+    }
+    
+    .accordion-button {
+        font-weight: bold;
+        color: #143b6c;
+        padding: 15px 20px;
+        transition: all 0.3s ease;
+    }
+    
+    .accordion-button::after {
+        background-size: 1rem;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Sidebar link active state */
+    .sidebar-nav a.active {
+        background-color:#F5A623;
+        color: white;
+        border-left: 5px solid #dc3545;
+    }
+table tr th{
+    padding: 5px 20px;
+}
+table tr td{
+    padding: 5px 20px;
+    border-bottom: 1px solid gray;
+}
+.step span{
+    background-color: #F5A623;
+width: 40px;
+height: 40px;
+padding: 10px;
+    color: white;
+font-weight: bold;
+
+}
+
+.Note{
+    display: flex;
+    background-color: #f53f231f;
+    padding: 10px;
+    align-items: center;
+    border-left: 3px solid rgb(147, 0, 0);
+}
+
+    </style>
+</head>
+<body>
+    <!-- Top bar with contact info -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <i class="fas fa-envelope me-2"></i>
+                    <span class="contact-email"> Email: mmitskn@gmail.com</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-md-end justify-content-start mt-2 mt-md-0">
+                    <i class="fas fa-phone-alt me-2"></i>
+                    <span class="contact-phone">+919452733876</span>
+                    <div class="social-icons ms-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with logo and college info -->
+    <header class="header-main">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-3 logo-container">
+                    <img src="img/logo1.jpg" alt="College Logo" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <h1 class="college-name">MAHAMAYA POLYTECHNIC OF INFORMATION TECHNOLOGY</h1>
+                    <h2 class="college-address">Balushasan, Sant Kabir Nagar, Uttar Pradesh 272175</h2>
+                    <h3 class="college-name-hindi">महामाया पॉलिटेक्निक ऑफ इन्फॉर्मेशन टेक्नोलॉजी                    </h3>
+                    <h4 class="college-address-hindi">बालूशासन, संत कबीर नगर, उत्तर प्रदेश,भारत, 272175</h4>
+                    <p class="college-affiliations">Government Polytechnic- Affiliated to Board of Technical Education Uttar Pradesh<br>Approved By AICTE, New Delhi <span class="college-code">College Code- 4812</span></p>
+                </div>
+                <div class="col-lg-2 col-md-3 state-emblem">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/UP.png" alt="UP State Emblem" class="img-fluid">
+                        </div>
+                        <!-- <div class="col-4">
+                            <img src="img/aicte.png" alt="UP State Emblem" class="img-fluid">
+
+                        </div> -->
+                        <div class="col-6">
+                            <img src="img/uptu-logo.png" alt="UP State Emblem" class="img-fluid">
+
+                        </div>
+                        
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav class="nav-main navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About institute</a></li>
+                            <li><a class="dropdown-item" href="MissionVision.html">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="princpalmessage.html">Administration</a></li>
+                        </ul>
+                    </li>
+              
+                    <li class="nav-item">
+                        <a class="nav-link" href="princpalmessage.html" role="button">
+                            Principal Message
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            AICTE
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Approvals</a></li>
+                            <li><a class="dropdown-item" href="#">Guidelines</a></li>
+                            <li><a class="dropdown-item" href="#">Mandatory Disclosures</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Academics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="OurCourses.html">Courses</a></li>
+                            <!-- <li><a class="dropdown-item" href="TEACHINGSTAFF.html">TEACHING STAFF</a></li> -->
+                            <li><a class="dropdown-item" href="ADMISSIONS.html">Admissions</a></li>
+                            <li><a class="dropdown-item" href="FEESTRUCTURE.html">Fee Structure</a></li>
+                            <li><a class="dropdown-item" href="#">List of Holidays</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            RTI
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="rti-officers.html">RTI OFFICERS</a></li>
+                            <li><a class="dropdown-item" href="right-to-info.html">RIGHT TO INFO</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cse.html">Computer Science Engineering</a></li>
+                            <li><a class="dropdown-item" href="Electronics.html">Electronics Engineering</a></li>
+                            <li><a class="dropdown-item" href="Electrical.html">Electrical Engineering</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Facilities & Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="library.html">Library</a></li>
+                            <li><a class="dropdown-item" href="Laboratories.html">Laboratories</a></li>
+                            <li><a class="dropdown-item" href="Hostels.html">Hostels</a></li>
+                            <li><a class="dropdown-item" href="Sports.html">Sports</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Training & Placement
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="placementcell.html">Placement Cell</a></li>
+                            <li><a class="dropdown-item" href="recruiter.html">Recruiters</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Statistics</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">
+                            Alumni
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Contact us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="address.html">Address</a></li>
+                            <li><a class="dropdown-item" href="map.html">Maps & Location</a></li>
+                            <li><a class="dropdown-item" href="phoneDirectory.html">Phone Directory</a></li>
+                            <li><a class="dropdown-item" href="query.html">Feedback/Query</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="accordion container  my-5" id="accordionExample">
+        <h1 class="welcome-heading">FEE STRUCTURE</h1>
+        <div class="mt-5">
+          <h5 class="fw-bold"> Fee Structure for Diploma Programs</h5>
+            <p>Government Polytechnic Sirsi follows the fee structure prescribed by BTEUP for all diploma programs.</p>
+        </div>
+        <!-- Sidebar -->
+            <!-- <div class="row"> -->
+                <div class="sidebar row ">
+                    <ul class="sidebar-nav d-flex gap-2" id="sidebar-tabs">
+                        <li>
+                            <a  class=" active " data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-controls="collapseOne">
+                                <i class="fas fa-info-circle"></i> Regular Fee
+                            </a>
+                        </li>
+                        <li>
+                            <a  class=" collapsed " data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
+                                <i class="fas fa-eye"></i> Hostel Fee
+                            </a>
+                        </li>
+                        <li>
+                            <a  class=" collapsed " data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-controls="collapseThree">
+                                <i class="fas fa-user"></i> Other Charges
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <hr>
+            <!-- </div> -->
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-12">
+                <div class="accordion-item">
+
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+ <section class="content-section">
+    <div class="">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div>
+                    <h5 class="fw-bold">Annual Fee Structure (2024-25 Academic Year)</h5>
+                </div>
+                <table width="100%" class="mt-4">
+                    <tr style="background-color: #F5A623; color: white; padding: 10px !important; " class="">
+                        <th class="pl-2">Program</th>
+                        <th>Tuition Fee</th>
+                        <th>Development Fee</th>
+                        <th>Registration Fee</th>
+                        <th>Exam Fee</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td>Computer Science Engineering</td>
+                        <td>₹8,000</td>
+                        <td>₹2,000</td>
+                        <td>₹500</td>
+                        <td>₹1,200</td>
+                        <td>₹11,700</td>
+                    </tr>
+                    <tr>
+                        <td>Electronics Engineering</td>
+                        <td>₹8,000</td>
+                        <td>₹2,000</td>
+                        <td>₹500</td>
+                        <td>₹1,200</td>
+                        <td>₹11,700</td>
+                    </tr>
+                    <tr>
+                        <td>Electrical Engineering</td>
+                        <td>₹8,000</td>
+                        <td>₹2,000</td>
+                        <td>₹500</td>
+                        <td>₹1,200</td>
+                        <td>₹11,700</td>
+                    </tr>
+                    <tr>
+                        <td>Lateral Entry (All Branches)</td>
+                        <td>₹8,000</td>
+                        <td>₹2,000</td>
+                        <td>₹500</td>
+                        <td>₹1,200</td>
+                        <td>₹11,700</td>
+                    </tr>
+
+                </table>
+
+                <div class="mt-5">
+                    <h6 class="fw-bold">Payment Information</h6>
+                    <hr>
+                    <p class="mb-0">Fees can be paid through online portal or demand draft in favor of <b> "Principal,MAHAMAYA POLYTECHNIC OF INFORMATION TECHNOLOGY Balushasan"</b></p>
+                    <p class="mb-0">First installment (50%) to be paid at the time of admission</p>
+                    <p class="mb-0">Second installment (50%) to be paid before commencement of 2nd semester</p>
+                </div>
+                <div class="mt-3 ">
+                    <div class="Note">
+
+                        <i class="fa-solid fa-circle-info"></i> <p style="padding-left: 10px;" class="mb-0"> <span class="fw-bold">Note: </span>Fees are subject to change as per BTEUP/Government directives. SC/ST candidates may be eligible for fee waiver as per government norms.</p>
+                    </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+</section>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                 
+                    <div id="collapseTwo" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <section class="content-section">
+                                <div class="">
+                                    <div class="row align-items-center">
+                                        <div class="col-12">
+                                            <div>
+                                                <h5 class="fw-bold">Hostel Fee Structure (Optional)</h5>
+                                            </div>
+                                            <table width="100%" class="mt-4">
+                                                <tr style="background-color: #F5A623; color: white; padding: 10px !important; " class="">
+                                                    <th class="pl-2">Component</th>
+                                                    <th>Amount (Annual)</th>
+                                                    <th>Remarks</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hostel Rent</td>
+                                                    <td>₹3,000</td>
+                                                    <td>Non-refundable</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>Mess Advance</td>
+                                                    <td>	₹5,000</td>
+                                                    <td>Refundable (adjustable against mess charges)</td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td>Security Deposit</td>
+
+                                                    <td>₹2,000</td>
+                                                    <td>	Refundable</td>
+                                                
+                                                </tr>
+                                                <tr>
+                                                    <td>Electricity Charges</td>
+                                                    <td>	₹1,200</td>
+                                                    <td>Non-refundable</td>
+                                                    
+                                                </tr>
+                                                <tr class="fw-bold">
+                                                    <td>Total</td>
+                                                    <td>₹11,200</td>
+                                                    <td>Payable at the time of hostel admission</td>
+                                                    
+                                                </tr>
+                            
+                                            </table>
+                            
+                                            <div class="mt-5">
+                                                <h6 class="fw-bold">Hostel Rules & Regulations</h6>
+                                                <hr>
+                                                <p class="mb-0">Hostel accommodation is subject to availability</p>
+                                                <p class="mb-0">Priority given to students from outside district</p>
+                                                <p class="mb-0">Mess charges are approximately ₹2,500 per month (subject to revision)</p>
+                                                <p class="mb-0">Hostel fee must be paid annually along with college fee</p>
+                                            </div>
+                                            <!-- <div class="mt-3 ">
+                                                <div class="Note">
+                            
+                                                    <i class="fa-solid fa-circle-info"></i> <p style="padding-left: 10px;" class="mb-0"> <span class="fw-bold">Note: </span>Fees are subject to change as per BTEUP/Government directives. SC/ST candidates may be eligible for fee waiver as per government norms.</p>
+                                                </div>
+                                               </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+
+                    <div id="collapseThree" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            
+                            <section class="content-section">
+                                <div class="">
+                                    <div class="row align-items-center">
+                                        <div class="col-12">
+                                            <div>
+                                                <h5 class="fw-bold">Other Academic Charges</h5>
+                                            </div>
+                                            <table width="100%" class="mt-4">
+                                                <tr style="background-color: #F5A623; color: white; padding: 10px !important; " class="">
+                                                    <th class="pl-2">Particulars</th>
+                                                    <th>Amount</th>
+                                                    <th>Frequency</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Library Deposit</td>
+                                                    <td>₹1,000</td>
+                                                    <td>One-time (Refundable)</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>Laboratory Deposit</td>
+                                                    <td>₹1,000</td>
+                                                    <td>One-time (Refundable)</td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td>Student Welfare Fund</td>
+
+                                                    <td>₹500</td>
+                                                    <td>Annual</td>
+                                                
+                                                </tr>
+                                                <tr>
+                                                    <td>Identity Card</td>
+                                                    <td>	₹100</td>
+                                                    <td>One-time</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>Sports Fee</td>
+                                                    <td>₹200</td>
+                                                    <td>Annual</td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td>Magazine Fee</td>
+                                                    <td>₹150</td>
+                                                    <td>Annual</td>
+                                                    
+                                                </tr>
+                                                <tr class="fw-bold">
+                                                    <td>Total Additional Charges</td>
+                                                    <td>₹2,950</td>
+                                                    <td>Payable with first installment</td>
+                                                    
+                                                </tr>
+                            
+                                            </table>
+                            
+                                            <div class="mt-5">
+                                                <h6 class="fw-bold">Scholarship Information</h6>
+                                                <hr>
+                                                <div class="d-flex justify-content-around">
+                                                    <div>
+                                                        <p class="mb-0">UP Government Scholarship</p>
+                                                        <p class="mb-0">For SC/ST/OBC students</p>
+                                                        <p class="mb-0">100% tuition fee waiver</p>
+                                                        <p class="mb-0">Application through SSO portal</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="mb-0">Post-Matric Scholarship</p>
+                                                        <p class="mb-0">For minority community students</p>
+                                                        <p class="mb-0">Admission fee + maintenance allowance</p>
+                                                        <p class="mb-0">Apply through National Scholarship Portal</p></div>
+                                                </div>
+                                                
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+    
+            
+        </div>
+    </div>
+
+    
+
+
+
+
+<!-- footer section -->
+<section class="footer-section">
+    <div class="container">
+
+        <div class="row ">
+           <div class="col-lg-4 col-md-12 px-3 px-md-5">
+            <h2 class="heading-text fs-4 border-bottom border-3 border-danger pb-1"><span>CONTACT US</span></h2>
+            <div class=" mt-4">
+                <div class="fw-bold d-flex">
+                    <div style="padding-right: 15px;">
+
+                        <i class="fa-solid fa-location-dot fs-4 text-orange"></i> 
+                    </div>
+                    <div class="">
+                    MAHAMAYA POLYTECHNIC OF INFORMATION TECHNOLOGY
+                    Balushasan, Sant Kabir Nagar, Uttar Pradesh 272175
+                    </div>
+                </div>
+                <div class=" d-flex mt-2">
+                    <div style="padding-right: 15px;">
+                        <i class="fa-solid fa-phone fs-4 text-orange"></i> 
+                    </div>
+                    <div class="">
+                        9452733876
+                    </div>
+                </div>
+                <div class=" d-flex mt-2">
+                    <div style="padding-right: 15px;">
+                        <i class="fa-solid fa-envelope fs-4 text-orange"></i> 
+                    </div>
+                    <div class="">
+                        MMITSKN@GMAIL.COM
+                    </div>
+                </div>
+
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-12 px-3 px-md-5 mt-4 mt-md-0">
+            <h2 class="heading-text fs-4 border-bottom border-3 border-danger pb-1"> <span> CURRICULAR ACTIVITIES</span></h2>
+          <p class="mt-4">
+            Cultural Programme
+          </p>
+          <p class="mt-2">
+            Sports & Games
+          </p>
+          <p class="mt-2">
+            News & Events
+          </p>
+          <p class="mt-2">
+            NCC
+          </p>
+          
+           </div>
+           <div class="col-lg-4 col-md-12 px-3 px-md-5">
+            <h2 class=" heading-text fs-4 border-bottom border-3 border-danger pb-1"> <span>REACH OUT HERE </span></h2>
+            <div class="mt-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7554278177863!2d83.06757472603712!3d26.847730176685864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39912fdb1cef093f%3A0x9fb65015cb04d251!2sM%20M%20I%20T%20Santkabir%20Nagar!5e0!3m2!1sen!2sin!4v1746452234834!5m2!1sen!2sin" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+           </div>
+        </div>
+        <hr>
+        <div class=" py-1 d-flex justify-content-between">
+<div class="">Copyright © 2025 Government Polytechnic SANTKABIRNAGAR. All Rights Reserved.</div>
+<div class="">Designed & Developed by <a href="https://digicoders.in/" target="_blank" style="text-decoration: none; cursor: pointer; z-index: 1000;">DigiCoders Technology Pvt. Ltd.</a></div>
+    </div>
+</section>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scrolling and active class management
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Smooth scroll to the accordion item
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active state based on visible accordion item
+            const accordions = document.querySelectorAll('.accordion-collapse');
+            accordions.forEach(accordion => {
+                accordion.addEventListener('shown.bs.collapse', function() {
+                    const id = this.id;
+                    sidebarLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-bs-target') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

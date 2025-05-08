@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission & Vision</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .main-title {
+            color: #143b6c;
+            text-align: center;
+            font-weight: bold;
+            margin: 40px 0;
+            position: relative;
+        }
+        .main-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #dc3545;
+            margin: 15px auto 0;
+        }
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 0;
+        }
+        .sidebar-nav {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar-nav a {
+            display: block;
+            padding: 15px 20px;
+            color: #143b6c;
+            text-decoration: none;
+            border-left: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+      
+        .sidebar-nav a:hover:not(.active) {
+            background-color: #e9ecef;
+            border-left: 5px solid #F5A623;
+        }
+        .sidebar-nav i {
+            margin-right: 10px;
+        }
+        .content-section {
+            /* background-color: #f8f9fa; */
+            padding: 30px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            /* padding: 60px 0; */
+    position: relative;
+    background-image:url("img/wall.png");
+    overflow: hidden;
+    background-attachment: fixed;
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .circle-icon {
+            background-color: #143b6c;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .content-section h2 {
+            color: #143b6c;
+            margin: 0;
+        }
+        .content-section ul {
+            padding-left: 15px;
+        }
+        .content-section li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 10px;
+        }
+        .content-section li:before {
+            content: "•";
+            color: #143b6c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                margin-bottom: 20px;
+            }
+            .content-section{
+                padding: 0px !important;
+                background-image: none !important;
+            }
+        }
+        /* Add smooth transition for accordion */
+    .accordion-button:not(.collapsed) {
+        color: #143b6c;
+        background-color: rgba(20, 59, 108, 0.1);
+        box-shadow: none;
+    }
+    
+    .accordion-button:focus {
+        box-shadow: none;
+        border-color: rgba(0,0,0,.125);
+    }
+    
+    .accordion-body {
+        padding: 0;
+    }
+    
+    .accordion-item {
+        border: none;
+        margin-bottom: 15px;
+    }
+    
+    .accordion-button {
+        font-weight: bold;
+        color: #143b6c;
+        padding: 15px 20px;
+        transition: all 0.3s ease;
+    }
+    
+    .accordion-button::after {
+        background-size: 1rem;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Sidebar link active state */
+    .sidebar-nav a.active {
+        background-color:#F5A623;
+        color: white;
+        border-left: 5px solid #dc3545;
+    }
+
+
+
+    /* Custom styles for the contact tabs section */
+    .contact-tabs-section {
+        background-color: #f8f9fa;
+    }
+    
+    .nav-tabs {
+        border-bottom: 2px solid #dee2e6;
+    }
+    
+    .nav-tabs .nav-link {
+        color: #495057;
+        font-weight: 500;
+        border: none;
+        padding: 12px 20px;
+        transition: all 0.3s;
+    }
+    
+    .nav-tabs .nav-link:hover {
+        color: #F5A623;
+        background-color: rgba(245, 166, 35, 0.1);
+    }
+    
+    .nav-tabs .nav-link.active {
+        color: #F5A623;
+        background-color: white;
+        border: none;
+        border-bottom: 3px solid #F5A623;
+    }
+    
+    .text-orange {
+        color: #F5A623;
+    }
+    
+    .btn-orange {
+        background-color: #F5A623;
+        color: white;
+        transition: all 0.3s;
+    }
+    
+    .btn-orange:hover {
+        background-color: #e6951a;
+        color: white;
+    }
+    
+    .map-container {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .tab-content {
+        background-color: white;
+    }
+
+    </style>
+</head>
+<body>
+     <!-- Top bar with contact info -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex align-items-center">
+                    <i class="fas fa-envelope me-2"></i>
+                    <span class="contact-email"> Email: mmitskn@gmail.com</span>
+                </div>
+                <div class="col-md-6 d-flex align-items-center justify-content-md-end justify-content-start mt-2 mt-md-0">
+                    <i class="fas fa-phone-alt me-2"></i>
+                    <span class="contact-phone">+919452733876</span>
+                    <div class="social-icons ms-3">
+                        <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with logo and college info -->
+    <header class="header-main">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-2 col-md-3 logo-container">
+                    <img src="img/logo1.jpg" alt="College Logo" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <h1 class="college-name">MAHAMAYA POLYTECHNIC OF INFORMATION TECHNOLOGY</h1>
+                    <h2 class="college-address">Balushasan, Sant Kabir Nagar, Uttar Pradesh 272175</h2>
+                    <h3 class="college-name-hindi">महामाया पॉलिटेक्निक ऑफ इन्फॉर्मेशन टेक्नोलॉजी                    </h3>
+                    <h4 class="college-address-hindi">बालूशासन, संत कबीर नगर, उत्तर प्रदेश,भारत, 272175</h4>
+                    <p class="college-affiliations">Government Polytechnic- Affiliated to Board of Technical Education Uttar Pradesh<br>Approved By AICTE, New Delhi <span class="college-code">College Code- 4812</span></p>
+                </div>
+                <div class="col-lg-2 col-md-3 state-emblem">
+                    <div class="row">
+                        <div class="col-6">
+                            <img src="img/UP.png" alt="UP State Emblem" class="img-fluid">
+                        </div>
+                        <!-- <div class="col-4">
+                            <img src="img/aicte.png" alt="UP State Emblem" class="img-fluid">
+
+                        </div> -->
+                        <div class="col-6">
+                            <img src="img/uptu-logo.png" alt="UP State Emblem" class="img-fluid">
+
+                        </div>
+                        
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav class="nav-main navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About institute</a></li>
+                            <li><a class="dropdown-item" href="MissionVision.html">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="princpalmessage.html">Administration</a></li>
+                        </ul>
+                    </li>
+              
+                    <li class="nav-item">
+                        <a class="nav-link" href="princpalmessage.html" role="button">
+                            Principal Message
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            AICTE
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Approvals</a></li>
+                            <li><a class="dropdown-item" href="#">Guidelines</a></li>
+                            <li><a class="dropdown-item" href="#">Mandatory Disclosures</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Academics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="OurCourses.html">Courses</a></li>
+                            <!-- <li><a class="dropdown-item" href="TEACHINGSTAFF.html">TEACHING STAFF</a></li> -->
+                            <li><a class="dropdown-item" href="ADMISSIONS.html">Admissions</a></li>
+                            <li><a class="dropdown-item" href="FEESTRUCTURE.html">Fee Structure</a></li>
+                            <li><a class="dropdown-item" href="#">List of Holidays</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            RTI
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="rti-officers.html">RTI OFFICERS</a></li>
+                            <li><a class="dropdown-item" href="right-to-info.html">RIGHT TO INFO</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="cse.html">Computer Science Engineering</a></li>
+                            <li><a class="dropdown-item" href="Electronics.html">Electronics Engineering</a></li>
+                            <li><a class="dropdown-item" href="Electrical.html">Electrical Engineering</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Facilities & Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="library.html">Library</a></li>
+                            <li><a class="dropdown-item" href="Laboratories.html">Laboratories</a></li>
+                            <li><a class="dropdown-item" href="Hostels.html">Hostels</a></li>
+                            <li><a class="dropdown-item" href="Sports.html">Sports</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Training & Placement
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="placementcell.html">Placement Cell</a></li>
+                            <li><a class="dropdown-item" href="recruiter.html">Recruiters</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Statistics</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" role="button">
+                            Alumni
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Contact us
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="address.html">Address</a></li>
+                            <li><a class="dropdown-item" href="map.html">Maps & Location</a></li>
+                            <li><a class="dropdown-item" href="phoneDirectory.html">Phone Directory</a></li>
+                            <li><a class="dropdown-item" href="query.html">Feedback/Query</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Contact Tabs Section -->
+<section class="contact-tabs-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Contact Information</h2>
+        
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs justify-content-center" id="contactTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="address-tab" data-bs-toggle="tab" data-bs-target="#address" type="button" role="tab" aria-controls="address" aria-selected="false">
+                    <i class="fas fa-map-marker-alt me-2"></i>Address
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="map-tab" data-bs-toggle="tab" data-bs-target="#map" type="button" role="tab" aria-controls="map" aria-selected="true">
+                    <i class="fas fa-map me-2"></i>Map
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="phone-tab" data-bs-toggle="tab" data-bs-target="#phone" type="button" role="tab" aria-controls="phone" aria-selected="false">
+                    <i class="fas fa-phone-alt me-2"></i>Phone Directory
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="query-tab" data-bs-toggle="tab" data-bs-target="#query" type="button" role="tab" aria-controls="query" aria-selected="false">
+                    <i class="fas fa-envelope me-2"></i>Query Form
+                </button>
+            </li>
+        </ul>
+        
+        <!-- Tab Content -->
+        <div class="tab-content p-4 border border-top-0 rounded-bottom" id="contactTabContent">
+            <!-- Address Tab -->
+            <div class="tab-pane fade" id="address" role="tabpanel" aria-labelledby="address-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-orange mb-4">College Address</h4>
+                        <p class="mb-4">
+                            <strong>MAHAMAYA POLYTECHNIC OF INFORMATION TECHNOLOGY</strong><br>
+                            Balushasan, Sant Kabir Nagar,<br>
+                            Uttar Pradesh 272175, India
+                        </p>
+                        <p class="mb-4">
+                            <strong>महामाया पॉलिटेक्निक ऑफ इन्फॉर्मेशन टेक्नोलॉजी</strong><br>
+                            बालूशासन, संत कबीर नगर,<br>
+                            उत्तर प्रदेश 272175, भारत
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-orange mb-4">Contact Details</h4>
+                        <p><strong><i class="fas fa-phone-alt me-2"></i>Phone:</strong> +91 9452733876</p>
+                        <p><strong><i class="fas fa-envelope me-2"></i>Email:</strong> mmitskn@gmail.com</p>
+                        <p><strong><i class="fas fa-clock me-2"></i>Working Hours:</strong> 9:00 AM - 5:00 PM (Mon-Sat)</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Tab -->
+            <div class="tab-pane fade show active" id="map" role="tabpanel" aria-labelledby="map-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-orange mb-4">Our Location</h4>
+                        <p>Find us on Google Maps for directions to our campus.</p>
+                        <div class="mt-4">
+                            <a href="https://goo.gl/maps/xyz" class="btn btn-orange" target="_blank">
+                                <i class="fas fa-directions me-2"></i>Get Directions
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7554278177863!2d83.06757472603712!3d26.847730176685864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39912fdb1cef093f%3A0x9fb65015cb04d251!2sM%20M%20I%20T%20Santkabir%20Nagar!5e0!3m2!1sen!2sin!4v1746452234834!5m2!1sen!2sin" 
+                                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Phone Directory Tab -->
+            <div class="tab-pane fade" id="phone" role="tabpanel" aria-labelledby="phone-tab">
+                <h4 class="text-orange mb-4">Important Contacts</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Department</th>
+                                <th>Contact Person</th>
+                                <th>Phone Number</th>
+                                <th>Extension</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Principal Office</td>
+                                <td>Principal</td>
+                                <td>+91 9452733876</td>
+                                <td>101</td>
+                            </tr>
+                            <tr>
+                                <td>Admission Office</td>
+                                <td>Admission Incharge</td>
+                                <td>+91 9452733876</td>
+                                <td>102</td>
+                            </tr>
+                            <tr>
+                                <td>Computer Science</td>
+                                <td>HOD, CSE</td>
+                                <td>+91 9452733876</td>
+                                <td>201</td>
+                            </tr>
+                            <tr>
+                                <td>Electronics</td>
+                                <td>HOD, Electronics</td>
+                                <td>+91 9452733876</td>
+                                <td>202</td>
+                            </tr>
+                            <tr>
+                                <td>Electrical</td>
+                                <td>HOD, Electrical</td>
+                                <td>+91 9452733876</td>
+                                <td>203</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Query Form Tab -->
+            <div class="tab-pane fade" id="query" role="tabpanel" aria-labelledby="query-tab">
+                <h4 class="text-orange mb-4">Send Us Your Query</h4>
+                <form id="contactForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select class="form-select" id="subject" required>
+                                <option value="" selected disabled>Select a subject</option>
+                                <option value="Admission">Admission Query</option>
+                                <option value="Courses">Course Information</option>
+                                <option value="Placement">Placement</option>
+                                <option value="General">General Inquiry</option>
+                                <option value="Feedback">Feedback</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message *</label>
+                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-orange px-4">
+                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- footer section -->
+<section class="footer-section">
+    <div class="container">
+
+        <div class="row ">
+           <div class="col-lg-4 col-md-12 px-3 px-md-5">
+            <h2 class="heading-text fs-4 border-bottom border-3 border-danger pb-1"><span>CONTACT US</span></h2>
+            <div class=" mt-4">
+                <div class="fw-bold d-flex">
+                    <div style="padding-right: 15px;">
+
+                        <i class="fa-solid fa-location-dot fs-4 text-orange"></i> 
+                    </div>
+                    <div class="">
+                    MAHAMAYA POLYTECHNIC OF INFORMATION TECHNOLOGY
+                    Balushasan, Sant Kabir Nagar, Uttar Pradesh 272175
+                    </div>
+                </div>
+                <div class=" d-flex mt-2">
+                    <div style="padding-right: 15px;">
+                        <i class="fa-solid fa-phone fs-4 text-orange"></i> 
+                    </div>
+                    <div class="">
+                        9452733876
+                    </div>
+                </div>
+                <div class=" d-flex mt-2">
+                    <div style="padding-right: 15px;">
+                        <i class="fa-solid fa-envelope fs-4 text-orange"></i> 
+                    </div>
+                    <div class="">
+                        MMITSKN@GMAIL.COM
+                    </div>
+                </div>
+
+            </div>
+           </div>
+           <div class="col-lg-4 col-md-12 px-3 px-md-5 mt-4 mt-md-0">
+            <h2 class="heading-text fs-4 border-bottom border-3 border-danger pb-1"> <span> CURRICULAR ACTIVITIES</span></h2>
+          <p class="mt-4">
+            Cultural Programme
+          </p>
+          <p class="mt-2">
+            Sports & Games
+          </p>
+          <p class="mt-2">
+            News & Events
+          </p>
+          <p class="mt-2">
+            NCC
+          </p>
+          
+           </div>
+           <div class="col-lg-4 col-md-12 px-3 px-md-5">
+            <h2 class=" heading-text fs-4 border-bottom border-3 border-danger pb-1"> <span>REACH OUT HERE </span></h2>
+            <div class="mt-4">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.7554278177863!2d83.06757472603712!3d26.847730176685864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39912fdb1cef093f%3A0x9fb65015cb04d251!2sM%20M%20I%20T%20Santkabir%20Nagar!5e0!3m2!1sen!2sin!4v1746452234834!5m2!1sen!2sin" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+           </div>
+        </div>
+        <hr>
+        <div class=" py-1 d-flex justify-content-between">
+<div class="">Copyright © 2025 Government Polytechnic SANTKABIRNAGAR. All Rights Reserved.</div>
+<div class="">Designed & Developed by <a href="https://digicoders.in/" target="_blank" style="text-decoration: none; cursor: pointer; z-index: 1000;">DigiCoders Technology Pvt. Ltd.</a></div>
+        </div>
+    </div>
+</section>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add smooth scrolling and active class management
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+            
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Remove active class from all links
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Smooth scroll to the accordion item
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active state based on visible accordion item
+            const accordions = document.querySelectorAll('.accordion-collapse');
+            accordions.forEach(accordion => {
+                accordion.addEventListener('shown.bs.collapse', function() {
+                    const id = this.id;
+                    sidebarLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-bs-target') === `#${id}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+
+
+
+            // JavaScript to handle tab switching and form submission
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Bootstrap tabs
+        var contactTab = new bootstrap.Tab(document.getElementById('map-tab'));
+        contactTab.show();
+        
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            alert('Thank you for your query! We will get back to you soon.');
+            this.reset();
+        });
+        
+        // You can add more JavaScript functionality as needed
+    });
+    </script>
+    
+</body>
+</html>

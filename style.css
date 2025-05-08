@@ -1,0 +1,587 @@
+ /* Custom styles */
+ :root {
+    --primary-blue: #0046ad;
+    --primary-orange: #f06c07;
+    /* --primary-orange: #F5A623; */
+    --yellow-bg: #ffcb05;
+    --red-accent: #e74c3c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.top-bar {
+    background-color: var(--primary-orange);
+    padding: 5px 0;
+    color: #000;
+}
+
+.contact-email {
+    /* color:var(--yellow-bg); */
+    /* font-weight: bold; */
+}
+
+.contact-phone {
+    color: #fff;
+    font-weight: bold;
+}
+
+.header-main {
+    padding: 15px 0;
+    background-color: #fff;
+}
+
+.logo-container img {
+    max-height: 140px;
+}
+
+.college-name {
+    color: var(--primary-blue);
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.college-name-hindi {
+    color: var(--primary-orange);
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.college-address {
+    color: var(--primary-blue);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.college-address-hindi {
+    color: var(--primary-orange);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.college-affiliations {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.college-code {
+   color: var(--primary-orange);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: var(--red-accent);
+}
+
+.state-emblem img {
+    max-height: 140px;
+}
+
+@media (max-width: 992px) {
+    .college-name, .college-name-hindi {
+        font-size: 18px;
+    }
+    .college-address, .college-address-hindi {
+        font-size: 14px;
+    }
+    .logo-container img, .state-emblem img {
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .college-name, .college-name-hindi {
+        font-size: 16px;
+        text-align: center;
+    }
+    .college-address, .college-address-hindi {
+        font-size: 12px;
+        text-align: center;
+    }
+    .college-affiliations, .college-code {
+        font-size: 12px;
+        text-align: center;
+    }
+    .logo-container, .state-emblem {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .logo-container img, .state-emblem img {
+        max-height: 80px;
+    }
+}
+/* Navbar Styles - Enhanced with Animations */
+.nav-main {
+    background-color: var(--primary-orange);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item {
+    position: relative;
+    /* margin: 0 2px; */
+}
+
+.nav-link {
+    color: white ;
+    /* font-weight: 500; */
+    padding: 5px 10px !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Main nav item underline animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0px;
+    opacity: 0;
+    height: 2px;
+    background: var(--yellow-bg);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.dropdown-toggle.show::after {
+    width: 60%;
+    opacity: 1;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--yellow-bg) !important;
+}
+
+.dropdown-toggle::after {
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    background-color: var(--primary-orange);
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    border-top: 2px solid var(--red-accent);
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover .dropdown-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-item {
+    color: #fff;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    border-left: 2px solid transparent;
+}
+
+/* Dropdown item left border animation */
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: var(--yellow-bg);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color:var(--primary-blue);
+    padding-left: 30px;
+    border-left: 2px solid var(--yellow-bg);
+}
+
+.dropdown-item:hover::before,
+.dropdown-item:focus::before {
+    width: 100%;
+}
+
+/* Mobile menu styles */
+.navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .nav-link {
+        padding: 10px 15px !important;
+    }
+    
+    .dropdown-menu {
+        background-color: var(--primary-blue);
+        margin-left: 0;
+        width: 100%;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        border-top: none;
+    }
+    
+    .dropdown-item {
+        padding: 8px 20px;
+    }
+    
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+        padding-left: 25px;
+    }
+    
+    .nav-item:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu {
+        min-width: 220px;
+    }
+}
+/* .about-section */
+
+.about-section {
+    padding: 60px 0;
+    position: relative;
+    background-image:url("img/wall.png");
+    overflow: hidden;
+    background-attachment: fixed;
+}
+
+/* .about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(245, 245, 245, 0.95), rgba(245, 245, 245, 0.95)), 
+                      url('/img/wall.png');
+    background-size: cover;
+    z-index: -1;
+} */
+
+.about-college {
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.welcome-heading {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.welcome-heading::after {
+    content: "";
+    display: block;
+    width: 170px;
+    height: 4px;
+    background-color: #F5A623;
+    margin-top: 15px;
+}
+.text-orange{
+    color: #F5A623;
+}
+.text-gray-500{
+    color:#555;
+}
+.college-description {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.know-more-btn {
+    background-color: #1e2a3a;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.know-more-btn:hover {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.college-img-container {
+    border: 5px solid #F5A623;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    overflow: hidden;
+}
+
+.college-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+@media (max-width: 767px) {
+    .welcome-heading {
+        font-size: 2rem;
+    }
+    
+    .college-img-container {
+        margin-top: 30px;
+        height: 300px;
+    }
+}
+
+/* Statistics-section */
+.Statistics-section {
+    position: relative;
+    background-image: url('img/classroom.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 1;
+    overflow: hidden;
+    color:var(--yellow-bg);
+}
+
+.Statistics-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 6, 190, 0.3); /* Blue overlay with 30% opacity */
+    z-index: 2;
+}
+
+/* Ensure content appears above the overlay */
+.Statistics-section > * {
+    position: relative;
+    z-index: 3;
+}
+.counter-number{
+    font-size: 3rem;
+    font-weight: bold;
+}
+.counter-box{
+    text-align: center;
+}
+
+
+
+/* testimonials-section */
+.testimonials-section {
+    background-color: #1d2b3e;
+    color: white;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonials-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/tablet distribution.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.testimonials-container {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.heading-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.heading-text span {
+    color: #F5A623;
+}
+
+.heading-line {
+    width: 100px;
+    height: 4px;
+    background-color: #F5A623;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+}
+
+.testimonial-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar-container {
+    flex: 0 0 100px;
+    margin-right: 20px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    color: #F5A623;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.testimonial-program {
+    color: #ccc;
+    font-style: italic;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-indicators button.active {
+    background-color: #F5A623;
+}
+
+@media (max-width: 767px) {
+    .testimonial-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .avatar-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .heading-text {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* gallery */
+
+.Gallery-section img{
+aspect-ratio: 4/3;
+object-fit: cover;
+}
+
+/* footer-section */
+
+.footer-section {
+    background-color: #000000;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/classroom and teaching.jpeg');
+    /* background-attachment: fixed; */
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+    pointer-events: none;
+}
